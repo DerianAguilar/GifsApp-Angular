@@ -1,0 +1,29 @@
+<div class="bg-dark border-right p-3 text-white" id="sideBar">
+    <h1>Gifs-App</h1>
+  
+    <hr class="text-white">
+
+  <div class="d-flex flex-column vh-100">
+
+    <div class="list-group list-reset">
+      <a 
+        href="#" 
+        class="list-group-item list-group-item-action" 
+        *ngFor="let txt of historial"
+        (click)="buscar( txt )"
+        >
+        {{ txt | titlecase }}
+      </a>
+    </div>
+
+    <div class="my-3" *ngIf="historial.length != 0">
+      <button 
+      class="btn btn-danger"
+      (click)="limpiar()"
+      >
+        Limpiar
+      </button>
+    </div>
+
+  </div>
+  </div>
